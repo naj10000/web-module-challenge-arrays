@@ -85,9 +85,14 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-  /*your code here*/
+function addFlavor(array, string){
+     
+  return array.splice(0, 0, string)
  }
+
+addFlavor(originalFlavors, "Rainbow Sherbert")
+
+console.log(originalFlavors)
 
 
 
@@ -103,9 +108,13 @@ Use the removeLastFlavor function below to do the following:
 */
 
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(array){
+ return array.pop()
 }
+
+removeLastFlavor(originalFlavors)
+
+console.log(originalFlavors)
 
 
 
@@ -121,9 +130,11 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(array, num){
+  return array[num]
 }
+
+console.log(getFlavorByIndex(originalFlavors, 2))
 
 
 
