@@ -152,9 +152,14 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(array, string){
+   return array.splice(array.indexOf(string), 1)
 }
+
+removeFlavorByName(originalFlavors, "Rocky Road")
+
+console.log(originalFlavors.length)
+
 
 
 
@@ -177,10 +182,11 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(array, string){
+   if (array.includes(string) === true)
 }
 
+filterByWord(originalFlavors, "Chocolate")
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
