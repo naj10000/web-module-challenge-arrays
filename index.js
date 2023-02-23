@@ -47,7 +47,7 @@ Use the copy function below to do the following:
 
 
 function copy(array){
-  return array
+  return [...array]
 }
 
 console.log(copy(originalFlavors))
@@ -87,8 +87,9 @@ Use the addFlavor function below to do the following:
 
 function addFlavor(array, string){
      
-  return array.splice(0, 0, string)
- }
+  array.unshift(string)
+  return array
+}
 
 addFlavor(originalFlavors, "Rainbow Sherbert")
 
@@ -109,7 +110,8 @@ Use the removeLastFlavor function below to do the following:
 
 
 function removeLastFlavor(array){
- return array.pop()
+  array.pop()
+  return array
 }
 
 removeLastFlavor(originalFlavors)
@@ -153,7 +155,8 @@ Use the removeFlavorByName function below to do the following:
 */
 
 function removeFlavorByName(array, string){
-   return array.splice(array.indexOf(string), 1)
+   array.splice(array.indexOf(string), 1)
+    return array
 }
 
 removeFlavorByName(originalFlavors, "Rocky Road")
@@ -183,10 +186,17 @@ Use the filterByWord function below to do the following:
 
 
 function filterByWord(array, string){
-   if (array.includes(string) === true)
+   let filterArray = [];
+   for( let i = 0; i < array.length; i++){
+    if(array[i].includes(string)){
+      filterArray.push(array[i]);
+    }
+   }
+   return filterArray;
 }
 
-filterByWord(originalFlavors, "Chocolate")
+console.log(filterByWord(originalFlavors, "Chocolate"))
+
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
